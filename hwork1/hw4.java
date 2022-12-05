@@ -1,4 +1,4 @@
-package hw_1_java;
+package hw_1_java.hwork1;
 import java.util.Random;
 import java.util.Arrays;
 
