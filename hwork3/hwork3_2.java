@@ -1,3 +1,4 @@
+// Итерация всех элементов списка цветов и добавления к каждому символа '!'.
 package hw_1_java.hwork3;
 
 import java.util.ArrayList;

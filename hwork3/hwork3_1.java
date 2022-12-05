@@ -1,3 +1,4 @@
+// Создать новый список, добавить несколько строк и вывести коллекцию на экран.
 package hw_1_java.hwork3;
 
 import java.util.ArrayList;
