@@ -11,40 +11,29 @@ import java.util.TreeMap;
 
 public class hw5 {
     public static void main(String[] args) {
-
-        // 1.
-        Map<Integer, String> dict = new HashMap<>();
-        // 2.
+        Map<Integer, String> dict = new HashMap<>(); 
         dict.putIfAbsent(999, "Red");
         dict.putIfAbsent(998, "Green");
         dict.putIfAbsent(997, "Blue");
         System.out.println("HashMap: " + dict);
-        // 3.
         for (int i : dict.keySet()) {
             dict.compute(i, (k, v) -> v = v + "!");
         }
         System.out.println("HashMap: " + dict);
-        // 3.*
         Map<Integer, String> treedict = new TreeMap<>();
         treedict.putIfAbsent(999, "Red!");
         treedict.putIfAbsent(998, "Green!");
         treedict.putIfAbsent(997, "Blue!");
         System.out.println("TreeMap: " + treedict);
-        // 4.*
         String testValue = "TestValue";
         for (int index = 0; index < 997; index++) {
             int randomKey;
             do {
                 randomKey = new Random().nextInt(997);
             } while (dict.containsKey(randomKey) && treedict.containsKey(randomKey));
-            //System.out.println("Random key: " + randomKey + " Hash of key: " + Integer.hashCode(randomKey));
             dict.put(randomKey, testValue);
             treedict.put(randomKey, testValue);
         }
-        //System.out.println("HashMap: " + dict);
-        // System.out.println("TreeMap: " + treedict);
-
-        // 5.
         long currentTime = System.currentTimeMillis();
         int index =0;
         for (int i : dict.keySet()) {
